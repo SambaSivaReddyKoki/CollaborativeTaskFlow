@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import './Login.css';
+import { API_ENDPOINTS } from '../config/api';
 
 const Login = ({ onLogin, onSwitchToRegister }) => {
   const [formData, setFormData] = useState({
@@ -22,7 +23,7 @@ const Login = ({ onLogin, onSwitchToRegister }) => {
     setError('');
 
     try {
-      const response = await fetch('http://localhost:3001/users/login', {
+      const response = await fetch(API_ENDPOINTS.LOGIN, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

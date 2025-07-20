@@ -2,7 +2,6 @@
 
 echo "🚀 Deploying Collaborative TaskFlow to Render..."
 
-# Step 1: Push to GitHub (if not already done)
 echo "📤 Pushing to GitHub..."
 git add .
 git commit -m "Deploy to Render"

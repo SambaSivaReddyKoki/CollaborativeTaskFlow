@@ -33,7 +33,6 @@ const KanbanBoard = ({ tasks, onTaskUpdate, onTaskMove }) => {
   const [dragOverColumn, setDragOverColumn] = useState(null);
 
   useEffect(() => {
-    // Organize tasks into columns based on status
     const organizedColumns = { ...columns };
     
     Object.keys(organizedColumns).forEach(columnKey => {
@@ -99,7 +98,6 @@ const KanbanBoard = ({ tasks, onTaskUpdate, onTaskMove }) => {
       return;
     }
 
-    // Check WIP limit
     const targetColumnData = columns[targetColumn];
     if (targetColumnData.wipLimit && 
         targetColumnData.tasks.length >= targetColumnData.wipLimit) {
@@ -109,7 +107,6 @@ const KanbanBoard = ({ tasks, onTaskUpdate, onTaskMove }) => {
       return;
     }
 
-    // Update task status
     const newStatus = getStatusForColumn(targetColumn);
     const updatedTask = { ...draggedTask, status: newStatus };
     

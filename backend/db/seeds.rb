@@ -1,10 +1,9 @@
-# Clear existing data
 User.destroy_all
 Project.destroy_all
 Task.destroy_all
 Comment.destroy_all
 
-# Create users
+user1 = User.create!(
 user1 = User.create!(
   name: 'John Doe',
   email: 'john@example.com',
@@ -26,7 +25,7 @@ user3 = User.create!(
   password_confirmation: 'password123'
 )
 
-# Create projects
+project1 = Project.create!(
 project1 = Project.create!(
   name: 'Website Redesign',
   description: 'Complete redesign of the company website with modern UI/UX',
@@ -45,7 +44,7 @@ project3 = Project.create!(
   creator: user1
 )
 
-# Create tasks
+Task.create!(
 Task.create!(
   title: 'Design Homepage',
   description: 'Create wireframes and mockups for the new homepage design',

@@ -53,7 +53,6 @@ class TasksController < ApplicationController
   end
 
   def task_params
-    # Handle both flat and nested parameters
     if params[:task]
       params.require(:task).permit(:title, :description, :status, :due_date, :assignee_id, :project_id)
     else

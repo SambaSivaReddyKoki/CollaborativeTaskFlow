@@ -10,10 +10,8 @@ function App() {
   const [showLogin, setShowLogin] = useState(true);
 
   useEffect(() => {
-    // Check if user is already logged in
     const token = localStorage.getItem('token');
     if (token) {
-      // Verify token with backend
       verifyToken(token);
     }
   }, []);

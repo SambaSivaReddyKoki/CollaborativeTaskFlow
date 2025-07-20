@@ -1,5 +1,4 @@
 services:
-  # Backend Rails API
   - type: web
     name: collaborative-taskflow-backend
     env: ruby
@@ -16,7 +15,6 @@ services:
       - key: JWT_SECRET
         generateValue: true
 
-  # Frontend React App
   - type: web
     name: collaborative-taskflow-frontend
     env: static

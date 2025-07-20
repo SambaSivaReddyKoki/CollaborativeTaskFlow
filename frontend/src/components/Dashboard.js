@@ -27,8 +27,7 @@ const Dashboard = ({ user, onLogout }) => {
         'Content-Type': 'application/json'
       };
 
-      // Fetch all data in parallel
-      const [projectsResponse, tasksResponse, usersResponse] = await Promise.all([
+          const [projectsResponse, tasksResponse, usersResponse] = await Promise.all([
         fetch('http://localhost:3001/projects', { headers }),
         fetch('http://localhost:3001/tasks', { headers }),
         fetch('http://localhost:3001/users', { headers })

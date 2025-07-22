@@ -131,7 +131,9 @@ A full-stack web application for team collaboration and task management, built w
 
 ### Authentication
 - `POST /users` - Register new user
+  <img width="1906" height="977" alt="image" src="https://github.com/user-attachments/assets/ba0345ce-3203-4f7d-a707-6c93bd6b5a3e" />
 - `POST /users/login` - User login
+  <img width="1919" height="969" alt="image" src="https://github.com/user-attachments/assets/4674cf3a-788a-45d6-a310-3dcf6dcf2102" />
 - `GET /users/profile` - Get current user profile
 
 ### Users
